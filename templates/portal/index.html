@@ -1,0 +1,52 @@
+{% extends 'portal/base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-5">Добро пожаловать в Корочки.есть</h1>
+  <p>Записывайтесь на курсы дополнительного образования.</p>
+</div>
+<div id="mainCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+  <!-- Индикаторы (точки внизу) -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- Слайды -->
+  <div class="carousel-inner rounded shadow">
+    <div class="carousel-item active">
+      <img src="{% static 'images/slide1.jpg' %}" class="d-block w-100" alt="Первый слайд" style="height: 400px; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Добро пожаловать в Корочки.есть</h5>
+        <p>Лучшие предложения только у нас.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/slide2.jpg' %}" class="d-block w-100" alt="Второй слайд" style="height: 400px; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Качество и надежность</h5>
+        <p>Мы работаем для вашего удобства.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/slide3.jpg' %}" class="d-block w-100" alt="Второй слайд" style="height: 400px; object-fit: cover;">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Качество и надежность</h5>
+        <p>Мы работаем для вашего удобства.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Кнопки управления -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'portal/base.html' %}
+{% block content %}
+<h2>Регистрация</h2>
+<form method="post" novalidate>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class="btn btn-primary">Создать пользователя</button>
+</form>
+{% endblock %}
